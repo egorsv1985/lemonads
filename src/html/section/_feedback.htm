@@ -1,0 +1,60 @@
+<section class="feedback">
+  <div class="container">
+    <div class="feedback__wrapper">
+      <div class="feedback__inner">
+        <form action="#" class="registration__form form">
+          <h2>Напишите нам</h2>
+          <div class="form__box">
+            <input
+              type="text"
+              class="form__input input"
+              id="name"
+              name="form[]"
+              data-error="Ошибка"
+              placeholder=""
+              required
+            />
+            <label for="name" class="form__label label">Ваше имя</label>
+          </div>
+          <div class="form__box">
+            <input
+              type="text"
+              class="form__input input"
+              id="email"
+              name="form[]"
+              data-error="Ошибка"
+              pattern="\+[0-9]{1,4}[0-9]{1,10}|(.*)@(.*)\.[a-z]{2,5}"
+              title=""
+              oninvalid="setCustomValidity('Телефон/эл. почта')"
+              placeholder=""
+              required
+            />
+            <label for="email" class="form__label label"
+              >Телефон/эл. почта</label
+            >
+          </div>
+          <div class="form__box">
+            <textarea
+              name="question"
+              id="question"
+              placeholder=""
+              class="form-body-basket__textarea"
+              required
+            ></textarea>
+            <label for="question" class="form__label label">Ваш вопрос</label>
+          </div>
+          <div class="form__box">
+            <input type="submit" value="Отправить" />
+          </div>
+        </form>
+      </div>
+      <div class="feedback__box-img">
+        <img
+          src="@img/feedback/feedback-img.png"
+          alt="feedback-img"
+          class="feedback__img"
+        />
+      </div>
+    </div>
+  </div>
+</section>

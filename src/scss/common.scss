@@ -1,0 +1,116 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.title {
+  font-family: "Mak";
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  @include media(max, xl) {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  @include media(max, lg) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  @include media(max, md) {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--main {
+    color: $mainColor;
+  }
+  &--accent {
+    color: $accentColor;
+  }
+  &--primary {
+    color: $primaryColor;
+  }
+  &--pseudo {
+    position: relative;
+    &::before {
+      @include pseudo;
+      @include wh(60px, 32px);
+      @include background(url("@img/icons/decor.svg"));
+      @include pos(absolute, $top: -60px, $left: 50%);
+      transform: translateX(-50%);
+    }
+    &::after {
+      @include pseudo;
+      @include wh(100px, 1px);
+      background-color: $accentColor;
+      @include pos(absolute, $bottom: -70px, $left: 50%);
+      transform: translateX(-50%);
+	  @include media (max, lg){
+		bottom: -30px;
+	  }
+    }
+  }
+  &--pseudo-white {
+    position: relative;
+    &::before {
+      @include pseudo;
+      @include wh(32px, 60px);
+      @include background(url("@img/icons/decor-white.svg"));
+      @include pos(absolute, $top: 18%, $left: -60px);
+      @include media(max, lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.subtitle {
+  font-family: "TenorSans";
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 120%;
+
+  color: $mainColor;
+  &-accent {
+    color: $accentColor;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+
+  color: $mainColor;
+  @include media(max, xl) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &--primary {
+    color: $primaryColor;
+  }
+  &--small {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &--big {
+    font-size: 21px;
+    line-height: 31px;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--accent {
+    color: $accentColor;
+  }
+}
+
+[class*="__wrapper"] {
+  @include flex($flex-direction: column);
+
+  position: relative;
+}

@@ -1,0 +1,123 @@
+.feedback {
+  position: relative;
+
+  padding: 60px 0 80px;
+  @include media(max, lg) {
+    padding: 30px 0 40px;
+  }
+  // .feedback__wrapper
+  &__wrapper {
+    position: relative;
+    @include flex(space-between, center, wrap, row);
+    background-color: $accentColor;
+    padding: 55px 60px 80px 125px;
+    @include media(max, lg) {
+      padding-left: 40px;
+    }
+  }
+  // .feedback__inner
+  &__inner {
+    @include flex($flex-direction: column);
+    gap: 40px;
+    @include media(max, lg) {
+      align-items: center;
+    }
+  }
+  // .feedback__box-content
+  &__box-content {
+    @include flex($flex-direction: column);
+    gap: 40px;
+  }
+  // .feedback__title
+  &__title {
+    max-width: 365px;
+  }
+  // .feedback__text
+  &__text {
+    max-width: 435px;
+    @include media(max, lg) {
+      max-width: 300px;
+    }
+    @include media(max, md) {
+      max-width: unset;
+      text-align: center;
+    }
+  }
+
+  // .feedback__form
+  &__form {
+    align-items: flex-start;
+    .form__btn {
+      @include wh(100%, 60px);
+      max-width: 275px;
+      @include flex(center, center);
+
+      background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
+      border-radius: 1000px;
+
+      font-size: 17px;
+      line-height: 20px;
+      @include media(max, sm){
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+    .form__label {
+      font-size: 32px;
+      line-height: 37px;
+      top: 0;
+      @include media(max, lg) {
+        top: 20px;
+        font-size: 21px;
+        line-height: 31px;
+        width: 100%;
+       
+      }
+      @include media(max, sm) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    .form__input::placeholder {
+      height: 55px;
+      font-size: 32px;
+      line-height: 37px;
+      max-width: 306px;
+      @include media(max, lg) {
+       
+        font-size: 21px;
+        line-height: 31px;
+       
+       
+      }
+      @include media(max, sm) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    .form__wrap {
+      width: unset;
+      padding-bottom: unset;
+    }
+  }
+  // .feedback__box-img
+  &__box-img {
+    @include pos(absolute, $top: -70px, $right: 70px);
+    @include media(max, 1160px) {
+      height: 100%;
+      top: -54px;
+    }
+    @include media(max, lg) {
+      right: 20px;
+    }
+  }
+  // .feedback__img
+  &__img {
+    @include media(max, 1160px) {
+      height: 110%;
+    }
+    @include media(max, md) {
+      display: none;
+    }
+  }
+}

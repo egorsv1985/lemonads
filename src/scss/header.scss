@@ -1,0 +1,11 @@
+.header {
+ 
+  // .header__wrapper
+  &__wrapper {
+    @include flex(space-between, center, wrap, row);
+    @include media(max, md) {
+      align-items: center;
+    }
+  }
+ 
+}

@@ -1,0 +1,180 @@
+//<FORM>
+// Снипет (HTML):
+.form {
+  @include flex(space-between, center);
+  gap: 20px;
+  @include media(max, 1160px) {
+    flex-direction: column;
+  }
+
+  // .form__wrap
+  &__wrap {
+    @include flex($flex-direction: column);
+    position: relative;
+    width: 76%;
+    padding-bottom: 20px;
+    @include media(max, 500px) {
+      width: 100%;
+    }
+  }
+
+  // .form__input
+  &__input {
+    border-bottom: 1px solid #fff;
+
+    font-family: "TenorSans";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+
+    color: #fff;
+
+    @include wh(100%, 80px);
+
+    position: relative;
+    caret-color: #dc7474;
+    background-color: transparent;
+    @include media(max, lg) {
+      font-size: 30px;
+      line-height: 35px;
+      height: 60px;
+    }
+    @include media(max, sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &:focus-visible,
+    &:focus,
+    &:active {
+      outline: none;
+      border-bottom: 1px solid #fff;
+    }
+
+    &:focus ~ .form__label,
+    &:valid ~ .form__label {
+      top: -30px;
+      @include media(max, lg) {
+        top: -20px;
+      }
+      @include media(max, sm) {
+        top: -10px;
+      }
+    }
+  }
+
+  // .form__label
+  &__label {
+    font-family: "TenorSans";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    width: 100%;
+    text-align: center;
+    
+
+    color: #fff;
+    position: absolute;
+   
+    left: 0;
+
+    transition: 0.5s;
+    @include media(max, lg) {
+      top: 25px;
+      font-size: 30px;
+      line-height: 35px;
+    }
+    @include media(max, sm) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__input::placeholder {
+    font-family: "TenorSans";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+
+    color: $primaryColor;
+    @include media(max, lg) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    @include media(max, sm) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  // .form__btn
+  &__btn {
+    @include wh(220px);
+
+    border-radius: 50%;
+    @include flex(center, center);
+    background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
+
+    font-family: "TenorSans";
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $primaryColor;
+    @include media(max, lg) {
+      @include wh(190px);
+      font-size: 16px;
+    }
+    @include media(max, md) {
+      @include wh(150px);
+      font-size: 14px;
+    }
+    @include media(max, sm) {
+      @include wh(100px);
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+  // .form__span
+  &__span {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+// @import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";
