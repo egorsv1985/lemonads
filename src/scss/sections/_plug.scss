@@ -1,0 +1,35 @@
+
+.plug {
+  // .plug__box
+  &__box {
+    @include flex(center, center);
+    position: relative;
+    margin: 0 auto;
+   
+  }
+  // .plug__img
+  &__img {}
+  // .plug__content
+  &__content {
+    max-width: 350px;
+    padding: 9px;
+ width: 100%;
+@include pos (absolute, $top:40%, $left:50%);
+transform: translateX(-50%);
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid #FF0000;
+backdrop-filter: blur(5px);
+
+
+  }
+  // .plug__text
+  &__text {
+    font-weight: 300;
+font-size: 20px;
+line-height: 20px;
+text-align: center;
+
+
+color: #FF0000;
+  }
+}

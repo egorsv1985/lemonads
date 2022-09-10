@@ -3,7 +3,7 @@
 @import "base/forms/forms";
 
 // Стили попапов
-// @import "base/popup";
+@import "base/popup";
 
 // Стили спойлеров
 // @import "base/spollers";
@@ -20,11 +20,11 @@
 
 
 .container {
-  max-width: 1266px;
+  max-width: 1000px;
   padding: 0 10px;
   margin: 0 auto;
 
-  @include media(max, lg) {
+  @include media(min, lg) {
     padding: 0 20px;
   }
 }

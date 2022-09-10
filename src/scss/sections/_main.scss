@@ -1,160 +1,42 @@
 .main {
-  padding-top: 100px;
-  // .main__wrapper
-  &__wrapper {
-    @include flex(center, $flex-direction: column);
-    position: relative;
+  padding-bottom: 15px;
+  @include media(min, lg) {
+   
   }
-  // .main__box-content
-  &__box-content {
-    @include flex(center, $flex-direction: column);
-    margin: 0 auto 320px;
+  // .main__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-row-gap: 35px;
+    justify-content: center;
+    align-items: baseline;
 
-    position: relative;
-    &::before,
-    &::after {
-      @include pseudo;
-      @include wh(60px, 32px);
-      @include background(url("@img/icons/decor.svg"));
-      @include pos(absolute, $top: -60px, $left: 50%);
-      transform: translateX(-50%);
-    }
-    &::after {
-      top: unset;
-      bottom: -60px;
-      transform: translateX(-50%) rotate(180deg);
+    max-width: 600px;
+    margin: 0 auto;
+    row-gap: 26px;
+
+    @include media(min, lg) {
+      grid-template-columns: repeat(6, 95px);
     }
   }
-  // .main__text
-  &__text {
-    text-align: center;
-
-    text-transform: uppercase;
-
-    color: #828282;
-
-    &--letter {
-      letter-spacing: 0.4em;
-    }
-    &--width {
-      max-width: 420px;
-      margin: 0 auto;
-    }
+  // .main__item
+  &__item {
+    min-width: 95px;
+  }
+  // .main__link
+  &__link {
+    @include flex(space-between, center, wrap, column);
+    gap: 14px;
+  }
+  // .main__img
+  &__img {
   }
   // .main__title
   &__title {
-    font-family: "Mak";
     font-weight: 300;
-    font-size: 128px;
-    line-height: 100%;
+    font-size: 12px;
+    line-height: 20px;
 
-    text-align: center;
-
-    background: linear-gradient(213.74deg, #d7b46a 0%, #e9d09d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    margin: 20px 0;
-    @include media(max, xl) {
-      font-size: 100px;
-      line-height: 100%;
-    }
-    @include media(max, lg) {
-      font-size: 80px;
-      line-height: 100%;
-    }
-    @include media(max, sm) {
-      font-size: 60px;
-      line-height: 100%;
-    }
-  }
-
-  // .main__box-wrap
-  &__box-wrap {
-    position: relative;
-  }
-
-  // .main__box-video
-  &__box-video {
-    @include pos(absolute, $bottom: 140%, $left: 50%);
-    transform: translateX(-50%);
-
-    width: 100%;
-    max-height: 684px;
-  }
-
-  // .main__btn
-  &__btn {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    @include flex(center, center);
-    background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
-
-    font-family: "TenorSans";
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 120%;
-
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #fff;
-    z-index: 1;
-
-    @include pos(absolute, $top: -14%, $right: 9%);
-
-    @include media(max, lg) {
-      @include wh(190px);
-      font-size: 16px;
-    }
-    @include media(max, md) {
-      @include wh(150px);
-      font-size: 14px;
-    }
-    @include media(max, sm) {
-      @include wh(100px);
-      padding: 10px;
-      font-size: 12px;
-    }
-  }
-
-  // .main__wrap
-  &__wrap {
-    background-color: $accentColor;
-    position: relative;
-    z-index: -1;
-    padding: 510px 0 128px;
-    @include background(url("@img/icons/decor_line.svg"));
-    background-position: bottom;
-    background-size: 100% 23px;
-    @include media(max, lg) {
-      padding-top: 40%;
-    }
-    @include media(max, sm) {
-      padding-top: 25%;
-      padding-bottom: 10%;
-    }
-  }
-  // .main__inner
-  &__inner {
-    @include flex(space-between);
-    gap: 20px;
-    @include media(max, sm) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  // .main__text-down
-  &__text-down {
-    max-width: 500px;
-    @include media(max, xl) {
-      max-width: 400px;
-    }
-    @include media(max, md) {
-      max-width: 300px;
-    }
+    color: $mainColor;
   }
 }

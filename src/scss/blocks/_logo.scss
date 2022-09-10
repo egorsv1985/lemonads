@@ -2,8 +2,8 @@
 
 	// .logo__img
 	&__img {
-		@include media (max, lg){
-			@include wh(70px, 76px);
+		@include media (min, lg){
+			@include wh(352px, 128px);
 		}
 		
 	}
