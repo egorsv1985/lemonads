@@ -1,100 +1,70 @@
 <div id="callback" aria-hidden="true" class="popup">
   <div class="popup__wrapper">
-    <div class="container">
-      <div class="popup__content">
-        <div class="popup__wrap">
-          <a href="home.html" class="popup__logo logo">
-            <img src="@img/icons/logo-popup.svg" alt="logo" class="logo__img" />
-          </a>
-          <button data-close type="button" class="popup__close">
-            <svg
-              
-              viewBox="0 0 21 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.7"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M20.4146 1.41422L19.0003 0L10.5001 8.50024L2.17237 0.172438L0.758154 1.58665L9.08592 9.91446L0.172852 18.8276L1.58706 20.2418L10.5001 11.3287L19.5856 20.4142L20.9999 19L11.9143 9.91446L20.4146 1.41422Z"
-                fill="black"
-              />
-            </svg>
-          </button>
-        </div>
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg
+          width="45"
+          height="46"
+          viewBox="0 0 45 46"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M22.4999 24.6545L32.7543 34.9117L34.7455 32.9232L24.4883 22.666L34.7455 12.4117L32.7571 10.4204L22.4999 20.6776L12.2455 10.4204L10.2571 12.4117L20.5115 22.666L10.2571 32.9204L12.2455 34.9117L22.4999 24.6545Z"
+            fill="white"
+          />
+        </svg>
+      </button>
 
-        <h2 class="popup__title">Обсудить проект</h2>
-        <h3 class="popup__subtitle">
-          Заполните заявку и мы свяжемся с вами, чтобы обсудить детали
-        </h3>
-        <form action="#" class="forms__form form">
-          <div class="form__box">
+      <h2 class="popup__title title">
+        Запишитесь на прием
+        <span class="title--green"> к нашим специалистам</span>
+      </h2>
+      <h3 class="popup__subtitle subtitle">
+        Заполните форму ниже и в ближайшее время с Вами свяжется наш специалист,
+        чтобы уточнить подробности
+      </h3>
+      <form action="#" class="forms__form form">
+        <div class="form__box">
+          <div class="form__wrap">
+            <label for="name" class="form__label"></label>
             <input
               type="text"
+              class="form__input"
               id="name"
-              name="form[]"
-              data-error="Ошибка"
-              placeholder=""
-              class="form__input"
-              required
+              name="name"
+              placeholder="Имя"
             />
-            <label for="name" class="form__label">Имя</label>
           </div>
-          <div class="form__box">
+          <div class="form__wrap">
+            <label for="tel" class="form__label"></label>
             <input
-              type="text"
-              id="organisation"
-              name="form[]"
-              data-error="Ошибка"
-              placeholder=""
-              class="form__input"
-              required
-            />
-            <label for="organisation" class="form__label">Организация</label>
-          </div>
-          <div class="form__box">
-            <input
-              class="form__input"
-              pattern="^\+7(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$"
-              required
               type="tel"
-              id="tel"
-              name="form[]"
-              data-error="Ошибка"
-              placeholder=""
-              required
-            />
-            <label for="tel" class="form__label">Телефон</label>
-          </div>
-          <div class="form__box">
-            <input
-              id="email"
               class="form__input"
-              type="email"
-              name="form[]"
-              data-error="Ошибка"
-              placeholder=""
-              required
+              id="tel"
+              name="tel"
+              placeholder="Телефон"
             />
-            <label for="email" class="form__label">Почта</label>
           </div>
-
-          <div class="form__inner">
-            <a
-              class="form__btn btn btn-primary"
-              href="#"
-              type="submit"
-              role="button"
-              >Отправить</a
+        </div>
+        <div class="form__inner">
+          <a
+            class="form__btn btn btn-primary"
+            href="#"
+            type="submit"
+            role="button"
+            >Оставить заявку</a
+          >
+          <p class="form__text text">
+            Нажимая кнопку “Отправит запрос” вы подстверждаете свое
+            <a href="#" class="text--green"
+              >согласие на обработку персональных данных</a
             >
-            <p class="form__text">
-              Нажимая кнопку «Отправить», вы даете
-              <a href="#">согласие на обработку ваших персональных данных.</a>
-            </p>
-          </div>
-        </form>
-      </div>
+          </p>
+        </div>
+      </form>
     </div>
   </div>
 </div>
