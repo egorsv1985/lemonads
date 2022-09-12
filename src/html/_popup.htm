@@ -1,70 +1,25 @@
-<div id="callback" aria-hidden="true" class="popup">
-  <div class="popup__wrapper">
-    <div class="popup__content">
-      <button data-close type="button" class="popup__close">
-        <svg
-          width="45"
-          height="46"
-          viewBox="0 0 45 46"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M22.4999 24.6545L32.7543 34.9117L34.7455 32.9232L24.4883 22.666L34.7455 12.4117L32.7571 10.4204L22.4999 20.6776L12.2455 10.4204L10.2571 12.4117L20.5115 22.666L10.2571 32.9204L12.2455 34.9117L22.4999 24.6545Z"
-            fill="white"
-          />
-        </svg>
-      </button>
-
-      <h2 class="popup__title title">
-        Запишитесь на прием
-        <span class="title--green"> к нашим специалистам</span>
-      </h2>
-      <h3 class="popup__subtitle subtitle">
-        Заполните форму ниже и в ближайшее время с Вами свяжется наш специалист,
-        чтобы уточнить подробности
-      </h3>
-      <form action="#" class="forms__form form">
-        <div class="form__box">
-          <div class="form__wrap">
-            <label for="name" class="form__label"></label>
-            <input
-              type="text"
-              class="form__input"
-              id="name"
-              name="name"
-              placeholder="Имя"
-            />
-          </div>
-          <div class="form__wrap">
-            <label for="tel" class="form__label"></label>
-            <input
-              type="tel"
-              class="form__input"
-              id="tel"
-              name="tel"
-              placeholder="Телефон"
-            />
-          </div>
-        </div>
-        <div class="form__inner">
-          <a
-            class="form__btn btn btn-primary"
-            href="#"
-            type="submit"
-            role="button"
-            >Оставить заявку</a
-          >
-          <p class="form__text text">
-            Нажимая кнопку “Отправит запрос” вы подстверждаете свое
-            <a href="#" class="text--green"
-              >согласие на обработку персональных данных</a
-            >
-          </p>
-        </div>
-      </form>
+<div id="callback" aria-hidden="true" class="modal">
+  <div class="modal__wrapper">
+    <button data-close type="button" class="modal__close">
+      <svg
+        width="18"
+        height="19"
+        viewBox="0 0 18 19"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16.5416 17.92C16.7336 18.1185 17.0501 18.1238 17.2486 17.9319C17.4472 17.7399 17.4525 17.4234 17.2605 17.2249L9.67884 9.3842L17.2604 1.5436C17.4524 1.34508 17.4471 1.02855 17.2486 0.836591C17.0501 0.644634 16.7335 0.649951 16.5416 0.848464L8.98331 8.66492L1.42506 0.848464C1.23311 0.649951 0.916571 0.644633 0.718058 0.83659C0.519545 1.02855 0.514227 1.34508 0.706185 1.5436L8.28779 9.3842L0.706112 17.2249C0.514156 17.4234 0.519472 17.7399 0.717985 17.9319C0.916499 18.1238 1.23304 18.1185 1.42499 17.92L8.98331 10.1035L16.5416 17.92Z"
+          fill="#929292"
+        />
+      </svg>
+    </button>
+    <div class="modal__content">
+      <img src="@img/logo-popup.png" alt="logo" class="modal__img" />
+      <h1 class="modal__title">Спасибо за Ваше обращение, уже обрабатываем!</h1>
+      <button class="modal__btn">Закрыть</button>
     </div>
   </div>
 </div>
